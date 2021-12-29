@@ -20,21 +20,13 @@ public class Helper {
         js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
-
     public static void scrollToEnd() {
         JavascriptExecutor js = (JavascriptExecutor) Driver.get();
         js.executeScript("window.scrollTo(0,6500)");
-    }
-
-    public static WebElement findElementByXpath(String xpath) {
-        return driver.findElement(By.xpath(xpath));
     }
 
     public static WebElement findElementByCss(String css) {
         return driver.findElement(By.cssSelector(css));
     }
 
-    public static void waitForElementToBeClickable(WebElement element){
-        wait.until(ExpectedConditions.elementToBeClickable(element));
-    }
 }

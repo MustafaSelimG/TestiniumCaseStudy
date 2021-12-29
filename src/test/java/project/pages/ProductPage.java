@@ -44,7 +44,6 @@ public class ProductPage {
     public void verifyProductPrice() {
         String price = productPrice.getText();
         basketButton.click();
-        Helper.waitForElement(basketPrice);
         Assert.assertEquals(price, basketPrice.getText());
     }
 
