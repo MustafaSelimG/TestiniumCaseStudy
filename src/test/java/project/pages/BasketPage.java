@@ -28,6 +28,7 @@ public class BasketPage {
         } catch (Exception e) {
             Helper.findElementByCss("#quantitySelect0 option:nth-child(1)").click();
         }
+        Helper.wait(3);
     }
 
     public void deleteProduct() {

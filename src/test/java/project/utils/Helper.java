@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 public class Helper {
     private static WebDriver driver = Driver.get();
     private static WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -29,4 +31,8 @@ public class Helper {
         return driver.findElement(By.cssSelector(css));
     }
 
+
+    public static void wait(int seconds) {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(seconds));
+    }
 }
