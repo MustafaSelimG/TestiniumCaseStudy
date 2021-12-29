@@ -21,6 +21,9 @@ public class BasketPage {
     @FindBy(css = ".m-empty__messageBtn")
     public WebElement continueShoppingButton;
 
+    @FindBy(id = "icon-loading")
+    public WebElement quantityLoading;
+
     public void increaseQuantity(int quantity) {
         productQuantity.click();
         try {
@@ -28,7 +31,7 @@ public class BasketPage {
         } catch (Exception e) {
             Helper.findElementByCss("#quantitySelect0 option:nth-child(1)").click();
         }
-        Helper.wait(3);
+        Helper.waitForElementInvisibility(quantityLoading);
     }
 
     public void deleteProduct() {

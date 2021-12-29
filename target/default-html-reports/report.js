@@ -164,10 +164,3 @@ formatter.step({
 formatter.match({
   "location": "project.step_def.MyStepdefs.basketShouldBeEmpty()"
 });
-formatter.result({
-  "status": "passed"
-});
-formatter.after({
-  "status": "passed"
-});
-});

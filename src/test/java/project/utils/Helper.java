@@ -17,6 +17,10 @@ public class Helper {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
+    public static void waitForElementInvisibility(WebElement element) {
+        wait.until(ExpectedConditions.invisibilityOf(element));
+    }
+
     public static void scrollToElement(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true);", element);
@@ -31,8 +35,4 @@ public class Helper {
         return driver.findElement(By.cssSelector(css));
     }
 
-
-    public static void wait(int seconds) {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(seconds));
-    }
 }
