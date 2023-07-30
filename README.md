@@ -36,3 +36,4 @@ Then, since the product quantity is only 1, it deletes from the basket without i
 </br></br>
 **When the case failed**</br></br>
 ![reportfail](https://user-images.githubusercontent.com/88919177/147647325-f8291dbf-747f-4f54-ab39-02ae705cda9e.gif)
+
