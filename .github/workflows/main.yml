@@ -11,4 +11,4 @@ jobs:
       - uses: actions/setup-node@v1
       - uses: omio-labs/pr-reviewer-bot@v1
         with:
-          GITHUB_TOKEN: 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
+          GITHUB_TOKEN:  ${{ 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 }}
